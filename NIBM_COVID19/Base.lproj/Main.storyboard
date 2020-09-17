@@ -10,8 +10,8 @@
         <!--loginView Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="loginView Controller" customClass="ViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="login">
+                <viewController id="BYZ-38-t0r" userLabel="loginView Controller" customClass="LoginViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="login" customClass="Lo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -235,7 +235,7 @@
         <!--signupView Controller-->
         <scene sceneID="BE9-Tb-XhW">
             <objects>
-                <viewController id="5VS-rV-HoY" userLabel="signupView Controller" sceneMemberID="viewController">
+                <viewController id="5VS-rV-HoY" userLabel="signupView Controller" customClass="CreateAccountViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Qk-5J-pXc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,10 +354,9 @@
         <!--Navigation Controller-->
         <scene sceneID="vbQ-ik-adc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8sh-Bi-G5R" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8sh-Bi-G5R" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vOY-1l-6Z0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -551,7 +550,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1OB-hF-VYL"/>
         <segue reference="GfC-6K-5XZ"/>
     </inferredMetricsTieBreakers>
 </document>
