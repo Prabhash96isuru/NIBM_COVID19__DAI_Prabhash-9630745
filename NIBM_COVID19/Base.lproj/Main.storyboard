@@ -156,7 +156,51 @@
                     <view key="view" contentMode="scaleToFill" id="wmQ-Nk-uef">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cb-Jj-k8O">
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="RJQ-Y6-5Qw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="vw0-dU-56g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rn9-KY-Mvt">
+                                <rect key="frame" x="50" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="NAf-lr-u4R"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="YrO-wJ-PAU"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="pb3-lu-xyh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Yes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gex-Q3-mes">
+                                <rect key="frame" x="234" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Qmq-Qw-hIW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Xry-mH-uDX"/>
+                                    <constraint firstAttribute="height" constant="120" id="r7r-A5-pbb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1pO-Dc-EuC" firstAttribute="bottom" secondItem="gex-Q3-mes" secondAttribute="bottom" constant="100" id="Fxa-6S-dCu"/>
+                            <constraint firstItem="1pO-Dc-EuC" firstAttribute="trailing" secondItem="gex-Q3-mes" secondAttribute="trailing" constant="50" id="NGJ-yp-jYx"/>
+                            <constraint firstItem="1pO-Dc-EuC" firstAttribute="bottom" secondItem="Rn9-KY-Mvt" secondAttribute="bottom" constant="100" id="OBZ-ZM-8QN"/>
+                            <constraint firstItem="Rn9-KY-Mvt" firstAttribute="leading" secondItem="1pO-Dc-EuC" secondAttribute="leading" constant="50" id="W3k-lf-R1b"/>
+                            <constraint firstItem="1Cb-Jj-k8O" firstAttribute="centerX" secondItem="wmQ-Nk-uef" secondAttribute="centerX" id="j4t-Zu-Adt"/>
+                            <constraint firstItem="1Cb-Jj-k8O" firstAttribute="top" secondItem="1pO-Dc-EuC" secondAttribute="top" constant="80" id="sW2-NU-5mA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1pO-Dc-EuC"/>
                     </view>
                 </viewController>
@@ -308,7 +352,51 @@
                     <view key="view" contentMode="scaleToFill" id="DxR-Oq-nQx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF8-rV-No6">
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Re7-tU-LqY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kbr-J5-cpJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEO-QH-9lj">
+                                <rect key="frame" x="50" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="3EZ-3N-sFG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="TEa-04-GnY"/>
+                                    <constraint firstAttribute="height" constant="120" id="bz8-Gt-H78"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Yes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-3o-y13">
+                                <rect key="frame" x="234" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8Ow-Qt-nxa"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="dBj-Y0-6E8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="dcq-cj-am0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FF8-rV-No6" firstAttribute="top" secondItem="3sw-i0-zO3" secondAttribute="top" constant="80" id="16s-yG-sgY"/>
+                            <constraint firstItem="3sw-i0-zO3" firstAttribute="trailing" secondItem="JeC-3o-y13" secondAttribute="trailing" constant="50" id="7xx-wQ-n70"/>
+                            <constraint firstItem="3sw-i0-zO3" firstAttribute="bottom" secondItem="hEO-QH-9lj" secondAttribute="bottom" constant="100" id="cbR-Cc-VzI"/>
+                            <constraint firstItem="hEO-QH-9lj" firstAttribute="leading" secondItem="3sw-i0-zO3" secondAttribute="leading" constant="50" id="pYA-2Z-Qc9"/>
+                            <constraint firstItem="FF8-rV-No6" firstAttribute="centerX" secondItem="DxR-Oq-nQx" secondAttribute="centerX" id="ufI-ky-GZC"/>
+                            <constraint firstItem="3sw-i0-zO3" firstAttribute="bottom" secondItem="JeC-3o-y13" secondAttribute="bottom" constant="100" id="vz8-4b-pUd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3sw-i0-zO3"/>
                     </view>
                 </viewController>
@@ -323,7 +411,51 @@
                     <view key="view" contentMode="scaleToFill" id="LAn-yV-oDL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4F-AC-jNS">
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="D7s-3U-h1Y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="a4l-Ql-XgC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUY-IM-9cF">
+                                <rect key="frame" x="50" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="1X2-dN-0CZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="8Oz-qd-CDu"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ESi-KM-Ud8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Yes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-MJ-Rm1">
+                                <rect key="frame" x="234" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="3q7-nv-Dhe"/>
+                                    <constraint firstAttribute="height" constant="120" id="Nmv-ee-jlO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="yZs-vC-hPJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O4F-AC-jNS" firstAttribute="top" secondItem="9fn-rC-PD6" secondAttribute="top" constant="80" id="UxD-XN-nS8"/>
+                            <constraint firstItem="DUY-IM-9cF" firstAttribute="leading" secondItem="9fn-rC-PD6" secondAttribute="leading" constant="50" id="Yuo-Ro-Ai9"/>
+                            <constraint firstItem="O4F-AC-jNS" firstAttribute="centerX" secondItem="LAn-yV-oDL" secondAttribute="centerX" id="eJG-Tg-rvY"/>
+                            <constraint firstItem="9fn-rC-PD6" firstAttribute="bottom" secondItem="eaQ-MJ-Rm1" secondAttribute="bottom" constant="100" id="hku-hK-fOg"/>
+                            <constraint firstItem="9fn-rC-PD6" firstAttribute="bottom" secondItem="DUY-IM-9cF" secondAttribute="bottom" constant="100" id="nWx-d6-viH"/>
+                            <constraint firstItem="9fn-rC-PD6" firstAttribute="trailing" secondItem="eaQ-MJ-Rm1" secondAttribute="trailing" constant="50" id="x16-r4-TGW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9fn-rC-PD6"/>
                     </view>
                 </viewController>
@@ -338,7 +470,51 @@
                     <view key="view" contentMode="scaleToFill" id="c0K-ay-Ue0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bK-SV-ciT">
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="XFY-4A-dHb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="jQV-9Z-2Zn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-qz-4CR">
+                                <rect key="frame" x="50" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="gRJ-Wt-pdk"/>
+                                    <constraint firstAttribute="height" constant="120" id="kMF-ol-lqm"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="tQW-lN-n9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Yes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iD-ug-tDV">
+                                <rect key="frame" x="234" y="642" width="130" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="1oq-yQ-6lg"/>
+                                    <constraint firstAttribute="height" constant="120" id="3lB-7z-qV5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="fpd-xx-VeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2bK-SV-ciT" firstAttribute="centerX" secondItem="c0K-ay-Ue0" secondAttribute="centerX" id="6jr-3k-QE4"/>
+                            <constraint firstItem="mcC-mX-nPv" firstAttribute="bottom" secondItem="MAu-qz-4CR" secondAttribute="bottom" constant="100" id="77h-I6-uCb"/>
+                            <constraint firstItem="mcC-mX-nPv" firstAttribute="bottom" secondItem="1iD-ug-tDV" secondAttribute="bottom" constant="100" id="BYr-HM-Vv1"/>
+                            <constraint firstItem="mcC-mX-nPv" firstAttribute="trailing" secondItem="1iD-ug-tDV" secondAttribute="trailing" constant="50" id="eD7-i0-vb8"/>
+                            <constraint firstItem="MAu-qz-4CR" firstAttribute="leading" secondItem="mcC-mX-nPv" secondAttribute="leading" constant="50" id="khV-N6-Xhq"/>
+                            <constraint firstItem="2bK-SV-ciT" firstAttribute="top" secondItem="mcC-mX-nPv" secondAttribute="top" constant="80" id="ofd-oX-ozE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mcC-mX-nPv"/>
                     </view>
                 </viewController>
