@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIt-7y-eXe">
-                                <rect key="frame" x="57" y="168" width="300" height="36"/>
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="f6q-h6-lvu"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="wTe-Aq-ZUQ"/>
@@ -154,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-Q8-e3m">
-                                <rect key="frame" x="57" y="168" width="300" height="36"/>
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="3kz-OJ-M5h"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ckv-mR-y3L"/>
@@ -186,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cb-Jj-k8O">
-                                <rect key="frame" x="57" y="168" width="300" height="36"/>
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="RJQ-Y6-5Qw"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="vw0-dU-56g"/>
@@ -220,13 +220,13 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="symptoms" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-7F-k0i">
-                                <rect key="frame" x="31" y="264" width="350" height="250"/>
+                                <rect key="frame" x="31" y="220" width="350" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="c7U-XB-91c"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you having any Symptoms above ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2it-01-AD4">
-                                <rect key="frame" x="16" y="554" width="382" height="100"/>
+                                <rect key="frame" x="16" y="510" width="382" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="ELb-ZW-oQv"/>
                                     <constraint firstAttribute="height" constant="100" id="RAK-ID-uaI"/>
@@ -479,13 +479,12 @@
             </objects>
             <point key="canvasLocation" x="2590" y="2409"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="fXn-Cm-baf">
             <objects>
-                <navigationController id="nfI-4U-rtV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hsw-jh-Cnz"/>
+                <navigationController navigationBarHidden="YES" id="nfI-4U-rtV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" springLoaded="YES" id="hsw-jh-Cnz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zqw-hr-e9s">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -599,13 +598,12 @@
             </objects>
             <point key="canvasLocation" x="3316" y="2408"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Ea7-z7-sNL">
             <objects>
-                <navigationController id="XYm-WA-CdM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Nal-zy-CEl"/>
+                <navigationController navigationBarHidden="YES" id="XYm-WA-CdM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" selectedImage="plus" id="Nal-zy-CEl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xs1-eB-sHl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -616,13 +614,12 @@
             </objects>
             <point key="canvasLocation" x="1868" y="1610"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="SuJ-d1-X0f">
             <objects>
-                <navigationController id="fUP-xO-gph" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eCx-ZB-N4m"/>
+                <navigationController navigationBarHidden="YES" id="fUP-xO-gph" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house" id="eCx-ZB-N4m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oBi-Y5-MKn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -640,6 +637,9 @@
     <resources>
         <image name="avoid" width="888" height="507"/>
         <image name="crowd" width="130" height="140"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="symptoms" width="940" height="670"/>
     </resources>
 </document>
