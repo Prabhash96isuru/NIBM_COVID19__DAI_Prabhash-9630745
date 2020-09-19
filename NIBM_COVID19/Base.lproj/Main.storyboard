@@ -34,6 +34,7 @@
                                     <color key="titleColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gR0-PV-51A"/>
                                     <segue destination="sFE-JA-blr" kind="show" id="tiM-nG-u4x"/>
                                 </connections>
                             </button>
@@ -588,6 +589,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="CreateAccountAction:" destination="5VS-rV-HoY" eventType="touchUpInside" id="Q0U-VO-mQ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpE-gd-t2O">
                                 <rect key="frame" x="57" y="683" width="300" height="45"/>
@@ -605,6 +609,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="GfC-6K-5XZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzK-R9-Evz">
+                                <rect key="frame" x="57" y="753" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mhe-jO-I3D"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="zUv-3g-gtD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -618,6 +632,8 @@
                             <constraint firstItem="bpE-gd-t2O" firstAttribute="top" secondItem="Efe-eK-eNa" secondAttribute="bottom" constant="20" id="VUS-HA-ccK"/>
                             <constraint firstItem="tVl-Q7-7Cm" firstAttribute="centerX" secondItem="6Qk-5J-pXc" secondAttribute="centerX" id="bbo-8g-3My"/>
                             <constraint firstItem="J5b-oQ-hVN" firstAttribute="centerX" secondItem="6Qk-5J-pXc" secondAttribute="centerX" id="c41-zH-7EW"/>
+                            <constraint firstItem="yzK-R9-Evz" firstAttribute="centerX" secondItem="bpE-gd-t2O" secondAttribute="centerX" id="gse-e5-2uC"/>
+                            <constraint firstItem="yzK-R9-Evz" firstAttribute="top" secondItem="bpE-gd-t2O" secondAttribute="bottom" constant="25" id="h9m-Gr-3UF"/>
                             <constraint firstItem="tVl-Q7-7Cm" firstAttribute="top" secondItem="E8c-Ak-K1G" secondAttribute="bottom" constant="30" id="j37-xF-Del"/>
                             <constraint firstItem="E8c-Ak-K1G" firstAttribute="centerX" secondItem="6Qk-5J-pXc" secondAttribute="centerX" id="pnD-sv-ZK0"/>
                             <constraint firstItem="Efe-eK-eNa" firstAttribute="top" secondItem="tVl-Q7-7Cm" secondAttribute="bottom" constant="28" id="rQV-aL-nUm"/>
@@ -631,6 +647,7 @@
                     <connections>
                         <outlet property="CreateAccountButton" destination="Efe-eK-eNa" id="XRh-Dp-ThJ"/>
                         <outlet property="EmailText" destination="dp8-vM-PGY" id="AZy-Fs-5pa"/>
+                        <outlet property="ErrorLabl" destination="yzK-R9-Evz" id="OhC-sA-SU4"/>
                         <outlet property="FirstNameText" destination="yfJ-nG-4oG" id="1QY-9j-Tqu"/>
                         <outlet property="LastNameText" destination="VuF-is-xgi" id="THm-cE-yUd"/>
                         <outlet property="PasswordText" destination="tVl-Q7-7Cm" id="xJW-TE-GWA"/>

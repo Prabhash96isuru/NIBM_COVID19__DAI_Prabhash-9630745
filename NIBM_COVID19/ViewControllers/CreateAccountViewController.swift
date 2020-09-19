@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
 
@@ -22,25 +23,76 @@ class CreateAccountViewController: UIViewController {
     
     @IBOutlet weak var CreateAccountButton: UIButton!
     
+    @IBOutlet weak var ErrorLabl: UILabel!
     
-    override func viewDidLoad() {
+    
+    
+    	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+        
+        func validateFields() -> String? {
+            
+            if FirstNameText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                LastNameText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                RoleText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                EmailText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                PasswordText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                {
+                    return "Fill all the requirements"
+            }
+        	
+            return nil
+        }
+        
+    // creating button function
+        @IBAction func CreateAccountAction(_ sender: Any) {
+            
+            //Validations on fields
+            let error = validateFields()
+        	
+            if error != nil
+            {
+                showError(error!)
+            }
+            else
+            {
+                let FirstName = FirstNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let LastName = LastNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let Role = RoleText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let Email = EmailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let Password = PasswordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+            
+                    		
+                //create user
+                Auth.auth().createUser(withEmail: Email, password: Password) { (result, err) in
+                    
+                    if let err = err
+                    {
+                        self.showError("Error while creating User")
+                    }
+                    else
+                    {
+                        let db = Firestore.firestore()
+                        
+                        db.collection("users").addDocument(data: ["FirstName": FirstName, "LastName": LastName, "Role": Role,"uid": result!.user.uid]) { (error) in
+                            <#code#>
+                        }
+                        
+                    }
+                }
+            }
+        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showError(_ message:String){
+        //display error
+        ErrorLabl.text = message
+        ErrorLabl.alpha = 1
     }
-    */
-    
-    
-    
 
 }
+	
