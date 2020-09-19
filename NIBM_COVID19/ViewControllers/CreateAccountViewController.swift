@@ -10,6 +10,19 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
+    @IBOutlet weak var FirstNameText: UITextField!
+    
+    @IBOutlet weak var LastNameText: UITextField!
+    
+    @IBOutlet weak var EmailText: UITextField!
+    
+    @IBOutlet weak var RoleText: UITextField!
+    
+    @IBOutlet weak var PasswordText: UITextField!
+    
+    @IBOutlet weak var CreateAccountButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +39,8 @@ class CreateAccountViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
 }
