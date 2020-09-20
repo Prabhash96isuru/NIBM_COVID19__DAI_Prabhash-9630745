@@ -98,12 +98,13 @@ class CreateAccountViewController: UIViewController {
         ErrorLabl.text = message
         ErrorLabl.alpha = 1
     }
-    func connectingHome(){
     
-        let loginVieewController =  storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as?
-        LoginViewController
+    func connectingHome() {
         
-        view.window?.rootViewController	= loginVieewController
+        let welcomeViewController =  storyboard?.instantiateViewController(identifier: Constants.Stroryboard.welcomeViewController) as?
+        WelcomeViewController
+        
+        view.window?.rootViewController = welcomeViewController
         view.window?.makeKeyAndVisible()
     }
     

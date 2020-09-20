@@ -43,12 +43,13 @@ class LoginViewController: UIViewController {
             }
             else
             {
-                let navHome = self.storyboard?.instantiateViewController(identifier: Navigation.Storyboard.navController) as?
-                NavController
-                
-                self.view.window?.rootViewController = navHome
+                let welcomeViewController =
+                    self.storyboard?.instantiateViewController(identifier: Constants.Stroryboard.welcomeViewController) as?
+                    WelcomeViewController
+                    
+                self.view.window?.rootViewController = welcomeViewController
                 self.view.window?.makeKeyAndVisible()
-
+                
                 
             }
         }

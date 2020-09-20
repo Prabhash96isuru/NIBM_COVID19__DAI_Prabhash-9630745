@@ -259,11 +259,11 @@
             <objects>
                 <viewController id="p8R-ZL-s55" userLabel="homeView Controller" customClass="HomeViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zqy-w0-cWG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-Q8-e3m">
-                                <rect key="frame" x="57" y="124" width="300" height="36"/>
+                                <rect key="frame" x="57" y="80" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="3kz-OJ-M5h"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ckv-mR-y3L"/>
@@ -310,7 +310,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkh-ub-Vht">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Update your Temperature">
+                                        <state key="normal" title="My Temperature">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -320,7 +320,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQT-b9-VIh">
                                         <rect key="frame" x="0.0" y="66" width="334" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Update your Situtatiation">
+                                        <state key="normal" title="My Situtatiation">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -776,6 +776,7 @@
                 <navigationController navigationBarHidden="YES" id="nfI-4U-rtV" userLabel="SetttingsNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" springLoaded="YES" id="hsw-jh-Cnz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zqw-hr-e9s">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -786,32 +787,50 @@
             </objects>
             <point key="canvasLocation" x="132" y="1610"/>
         </scene>
-        <!--WelcomeView Controller-->
-        <scene sceneID="oDP-bn-Vsy">
+        <!--Welcome View Controller-->
+        <scene sceneID="4v9-xs-0dC">
             <objects>
-                <viewController id="2O7-QB-r5v" userLabel="WelcomeView Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kXJ-aB-aE4">
+                <viewController storyboardIdentifier="welcomeVC" id="VOg-4N-AZL" customClass="WelcomeViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6SM-Bf-UYb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="symptoms" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-h7-SH8">
-                                <rect key="frame" x="-263" y="323" width="940" height="250"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-8c-bX0">
+                                <rect key="frame" x="140.66666666666666" y="474" width="132.99999999999997" height="120"/>
+                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="nCe-RB-cNB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="7gQ-J9-mNx"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="OdV-AM-0b4"/>
+                                    <constraint firstAttribute="height" constant="120" id="c2P-dF-GWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="sFE-JA-blr" kind="show" id="51L-P2-xfI"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="euU-2V-abi">
+                                <rect key="frame" x="32" y="194" width="350" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="TLL-zS-fkJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ufi-h7-SH8" firstAttribute="centerY" secondItem="kXJ-aB-aE4" secondAttribute="centerY" id="o0T-Ty-kWV"/>
-                            <constraint firstItem="ufi-h7-SH8" firstAttribute="centerX" secondItem="kXJ-aB-aE4" secondAttribute="centerX" id="sZI-no-XQX"/>
+                            <constraint firstItem="euU-2V-abi" firstAttribute="top" secondItem="ErW-EV-6hH" secondAttribute="top" constant="150" id="YGj-1j-5WY"/>
+                            <constraint firstItem="QZH-8c-bX0" firstAttribute="top" secondItem="euU-2V-abi" secondAttribute="bottom" constant="30" id="YQR-au-37V"/>
+                            <constraint firstItem="euU-2V-abi" firstAttribute="leading" secondItem="ErW-EV-6hH" secondAttribute="leading" constant="32" id="b3Y-k5-cbJ"/>
+                            <constraint firstAttribute="trailing" secondItem="euU-2V-abi" secondAttribute="trailing" constant="32" id="jm5-Wv-haN"/>
+                            <constraint firstItem="QZH-8c-bX0" firstAttribute="centerX" secondItem="6SM-Bf-UYb" secondAttribute="centerX" id="rmZ-nt-u2W"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hjr-js-gfL"/>
+                        <viewLayoutGuide key="safeArea" id="ErW-EV-6hH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HHA-ay-Si5"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LxX-uS-pQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xko-1v-8ZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="883"/>
+            <point key="canvasLocation" x="132" y="883"/>
         </scene>
         <!--Nav Controller-->
         <scene sceneID="3Q1-E5-32f">
@@ -922,6 +941,7 @@
                 <navigationController navigationBarHidden="YES" id="XYm-WA-CdM" userLabel="CreateNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" selectedImage="plus" id="Nal-zy-CEl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xs1-eB-sHl">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -938,6 +958,7 @@
                 <navigationController navigationBarHidden="YES" id="fUP-xO-gph" userLabel="HomeNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house" id="eCx-ZB-N4m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oBi-Y5-MKn">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1117,7 +1138,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qsI-Bg-Eat"/>
-        <segue reference="OGb-sx-uvS"/>
+        <segue reference="wAH-O7-LnI"/>
         <segue reference="GfC-6K-5XZ"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1129,5 +1150,6 @@
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="symptoms" width="940" height="670"/>
+        <image name="welcome" width="313" height="208.5"/>
     </resources>
 </document>

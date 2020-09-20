@@ -18,9 +18,9 @@
 		11367E7625141DA600B056E4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11367E7525141DA600B056E4 /* CreateAccountViewController.swift */; };
 		1154D4CE2515FB71004D96B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1154D4CD2515FB71004D96B0 /* GoogleService-Info.plist */; };
 		1154D4D2251742B9004D96B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154D4D1251742B9004D96B0 /* HomeViewController.swift */; };
-		1154D4DE25176B0D004D96B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154D4DD25176B0D004D96B0 /* Constants.swift */; };
-		1154D4E0251772B3004D96B0 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154D4DF251772B3004D96B0 /* Navigation.swift */; };
 		1154D4E325177321004D96B0 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154D4E225177321004D96B0 /* NavController.swift */; };
+		1154D4E725178C4C004D96B0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154D4E625178C4C004D96B0 /* WelcomeViewController.swift */; };
+		115C1D9E2517A7C200FA2BC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115C1D9D2517A7C200FA2BC2 /* Constants.swift */; };
 		6106A055459766411C2AC858 /* Pods_NIBM_COVID19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF27B7E879F7D53B3D9E51B /* Pods_NIBM_COVID19.framework */; };
 		61ABE71C6687D67A67ED178E /* Pods_NIBM_COVID19Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691D79BEB4D4F70CB04F0D7D /* Pods_NIBM_COVID19Tests.framework */; };
 		C485FFCCD83484A3229AFB9F /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6961CD5F767EE43AF0B17FB /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework */; };
@@ -62,9 +62,9 @@
 		11367E7525141DA600B056E4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		1154D4CD2515FB71004D96B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1154D4D1251742B9004D96B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1154D4DD25176B0D004D96B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1154D4DF251772B3004D96B0 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		1154D4E225177321004D96B0 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		1154D4E625178C4C004D96B0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		115C1D9D2517A7C200FA2BC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		203C6F87B8E81E3A5D5830EA /* Pods-NIBM_COVID19-NIBM_COVID19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM_COVID19-NIBM_COVID19UITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM_COVID19-NIBM_COVID19UITests/Pods-NIBM_COVID19-NIBM_COVID19UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4041BDDA97BF86DDFAC8097E /* Pods-NIBM_COVID19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM_COVID19.release.xcconfig"; path = "Target Support Files/Pods-NIBM_COVID19/Pods-NIBM_COVID19.release.xcconfig"; sourceTree = "<group>"; };
 		691D79BEB4D4F70CB04F0D7D /* Pods_NIBM_COVID19Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_COVID19Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +166,7 @@
 				11367E7325141D7000B056E4 /* LoginViewController.swift */,
 				11367E7525141DA600B056E4 /* CreateAccountViewController.swift */,
 				1154D4D1251742B9004D96B0 /* HomeViewController.swift */,
+				1154D4E625178C4C004D96B0 /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,8 +174,7 @@
 		1154D4D3251746CF004D96B0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1154D4DD25176B0D004D96B0 /* Constants.swift */,
-				1154D4DF251772B3004D96B0 /* Navigation.swift */,
+				115C1D9D2517A7C200FA2BC2 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -450,14 +450,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1154D4E725178C4C004D96B0 /* WelcomeViewController.swift in Sources */,
 				1154D4D2251742B9004D96B0 /* HomeViewController.swift in Sources */,
 				11367E7625141DA600B056E4 /* CreateAccountViewController.swift in Sources */,
-				1154D4E0251772B3004D96B0 /* Navigation.swift in Sources */,
 				11367E7425141D7000B056E4 /* LoginViewController.swift in Sources */,
 				11367E432513CF3800B056E4 /* AppDelegate.swift in Sources */,
-				1154D4DE25176B0D004D96B0 /* Constants.swift in Sources */,
 				11367E452513CF3800B056E4 /* SceneDelegate.swift in Sources */,
 				1154D4E325177321004D96B0 /* NavController.swift in Sources */,
+				115C1D9E2517A7C200FA2BC2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

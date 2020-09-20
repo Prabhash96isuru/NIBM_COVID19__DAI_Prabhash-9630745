@@ -10,8 +10,8 @@ import Foundation
 
 struct Constants
 {
-        struct Storyboard
-        {
-            static let loginViewController = "loginVC"
+    struct Stroryboard
+    {
+       static let welcomeViewController = "welcomeVC"
     }
 }
