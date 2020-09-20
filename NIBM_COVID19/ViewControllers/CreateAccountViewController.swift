@@ -70,7 +70,7 @@ class CreateAccountViewController: UIViewController {
                 //create user
                 Auth.auth().createUser(withEmail: Email, password: Password) { (result, err) in
                     
-                    if let err = err
+                    if err != nil
                     {
                         self.showError("Error while creating User")
                     }
@@ -78,9 +78,14 @@ class CreateAccountViewController: UIViewController {
                     {
                         let db = Firestore.firestore()
                         
-                        db.collection("users").addDocument(data: ["FirstName": FirstName, "LastName": LastName, "Role": Role,"uid": result!.user.uid]) { (error) in
-                            <#code#>
+                        db.collection("users").addDocument(data: ["FirstName": FirstName, "LastName": LastName, "Role": Role,"uid": result!.user.uid]) { (error	) in
+                            if error != nil
+                            {
+                                self.showError("User basic info couldn't be saved")
+                            }
                         }
+                        self.connectingHome()
+    
                         
                     }
                 }
@@ -93,6 +98,9 @@ class CreateAccountViewController: UIViewController {
         ErrorLabl.text = message
         ErrorLabl.alpha = 1
     }
-
+    func connectingHome(){
+        let homeViewController =  storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController)as? HomeViewController
+    }
+    
 }
 	

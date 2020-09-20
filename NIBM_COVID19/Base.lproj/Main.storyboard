@@ -245,8 +245,8 @@
         <!--homeView Controller-->
         <scene sceneID="6No-Ut-Omk">
             <objects>
-                <viewController id="p8R-ZL-s55" userLabel="homeView Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zqy-w0-cWG">
+                <viewController id="p8R-ZL-s55" userLabel="homeView Controller" customClass="HomeViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeVC" id="zqy-w0-cWG" customClass="Home">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
