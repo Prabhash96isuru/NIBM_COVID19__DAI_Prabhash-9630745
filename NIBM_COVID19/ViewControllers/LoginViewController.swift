@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var SignInButton: UIButton!
     
+    @IBOutlet weak var errorLbl: UILabel!
     
     
     override func viewDidLoad() {
@@ -27,7 +29,40 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func LoginAction(_ sender: Any) {
+        
+        let email = EmailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = PasswordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil
+            {
+                self.errorLbl.text = error!.localizedDescription
+                self.errorLbl.alpha = 1
+            }
+            else
+            {
+                let navHome = self.storyboard?.instantiateViewController(identifier: Navigation.Storyboard.navController) as?
+                NavController
+                
+                self.view.window?.rootViewController = navHome
+                self.view.window?.makeKeyAndVisible()
+
+                
+            }
+        }
+        
     }
+    
+    /*func homeNavigation()
+    {
+        let navHome = storyboard?.instantiateViewController(identifier: Navigation.Storyboard.navController) as?
+        NavController
+        
+        view.window?.rootViewController = navHome
+        view.window?.makeKeyAndVisible()
+    }*/
     
 
 }

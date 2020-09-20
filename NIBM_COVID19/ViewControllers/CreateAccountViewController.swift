@@ -99,9 +99,11 @@ class CreateAccountViewController: UIViewController {
         ErrorLabl.alpha = 1
     }
     func connectingHome(){
-        let homeViewController =  storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController)as? HomeViewController
+    
+        let loginVieewController =  storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as?
+        LoginViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController	= loginVieewController
         view.window?.makeKeyAndVisible()
     }
     

@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  Navigation.swift
 //  NIBM_COVID19
 //
 //  Created by Isuru Prabhash on 9/20/20.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct Constants
-{
-        struct Storyboard
-        {
-            static let loginViewController = "loginVC"
+struct Navigation {
+    struct Storyboard {
+        
+        static let navController = "navVC"
     }
 }

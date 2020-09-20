@@ -10,7 +10,7 @@
         <!--loginView Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="loginView Controller" customClass="LoginViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" userLabel="loginView Controller" customClass="LoginViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="login">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gR0-PV-51A"/>
-                                    <segue destination="sFE-JA-blr" kind="show" id="tiM-nG-u4x"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passowrd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-k9-jaX">
@@ -62,15 +61,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-QF-0L7" userLabel="errorLbl">
+                                <rect key="frame" x="57" y="745" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="it1-Jt-Qze"/>
+                                    <constraint firstAttribute="height" constant="45" id="xHf-zv-r2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="PCQ-QF-0L7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Q7-Qd-BjX"/>
                             <constraint firstItem="Ile-k9-jaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQx-Ao-o07"/>
                             <constraint firstItem="9vG-Vz-YmH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T6V-T5-IPI"/>
                             <constraint firstItem="LYV-aq-jSY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xc7-bN-jHp"/>
                             <constraint firstItem="Ile-k9-jaX" firstAttribute="top" secondItem="LYV-aq-jSY" secondAttribute="bottom" constant="50" id="klG-Vh-pmJ"/>
                             <constraint firstItem="FDu-10-pFz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m79-Mv-KCa"/>
                             <constraint firstItem="FDu-10-pFz" firstAttribute="top" secondItem="4P0-lj-0kV" secondAttribute="bottom" constant="68" id="mt7-yJ-Nee"/>
+                            <constraint firstItem="PCQ-QF-0L7" firstAttribute="top" secondItem="FDu-10-pFz" secondAttribute="bottom" constant="37" id="pRM-WK-dlk"/>
                             <constraint firstItem="4P0-lj-0kV" firstAttribute="top" secondItem="Ile-k9-jaX" secondAttribute="bottom" constant="50" id="rRR-fK-lOv"/>
                             <constraint firstItem="4P0-lj-0kV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFF-3E-MCb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FDu-10-pFz" secondAttribute="bottom" constant="100" id="vrx-wN-CLx"/>
@@ -83,6 +94,7 @@
                         <outlet property="EmailText" destination="LYV-aq-jSY" id="brv-md-bra"/>
                         <outlet property="PasswordText" destination="Ile-k9-jaX" id="3o6-jO-crb"/>
                         <outlet property="SignInButton" destination="4P0-lj-0kV" id="NqB-kS-EtE"/>
+                        <outlet property="errorLbl" destination="PCQ-QF-0L7" id="qQ7-6u-e2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJZ-ly-n2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="2409"/>
+            <point key="canvasLocation" x="-743" y="2409"/>
         </scene>
         <!--contactUsView Controller-->
         <scene sceneID="7wr-Rz-UFn">
@@ -246,12 +258,12 @@
         <scene sceneID="6No-Ut-Omk">
             <objects>
                 <viewController id="p8R-ZL-s55" userLabel="homeView Controller" customClass="HomeViewController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeVC" id="zqy-w0-cWG" customClass="Home">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                    <view key="view" contentMode="scaleToFill" id="zqy-w0-cWG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-Q8-e3m">
-                                <rect key="frame" x="57" y="80" width="300" height="36"/>
+                                <rect key="frame" x="57" y="124" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="3kz-OJ-M5h"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ckv-mR-y3L"/>
@@ -764,7 +776,6 @@
                 <navigationController navigationBarHidden="YES" id="nfI-4U-rtV" userLabel="SetttingsNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" springLoaded="YES" id="hsw-jh-Cnz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zqw-hr-e9s">
-                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -775,10 +786,37 @@
             </objects>
             <point key="canvasLocation" x="132" y="1610"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--WelcomeView Controller-->
+        <scene sceneID="oDP-bn-Vsy">
+            <objects>
+                <viewController id="2O7-QB-r5v" userLabel="WelcomeView Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXJ-aB-aE4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="symptoms" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-h7-SH8">
+                                <rect key="frame" x="-263" y="323" width="940" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="nCe-RB-cNB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ufi-h7-SH8" firstAttribute="centerY" secondItem="kXJ-aB-aE4" secondAttribute="centerY" id="o0T-Ty-kWV"/>
+                            <constraint firstItem="ufi-h7-SH8" firstAttribute="centerX" secondItem="kXJ-aB-aE4" secondAttribute="centerX" id="sZI-no-XQX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hjr-js-gfL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LxX-uS-pQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="883"/>
+        </scene>
+        <!--Nav Controller-->
         <scene sceneID="3Q1-E5-32f">
             <objects>
-                <tabBarController id="sFE-JA-blr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="navVC" id="sFE-JA-blr" customClass="NavController" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gZQ-Xq-mOm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nxg-Tc-NoQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -884,7 +922,6 @@
                 <navigationController navigationBarHidden="YES" id="XYm-WA-CdM" userLabel="CreateNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" selectedImage="plus" id="Nal-zy-CEl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xs1-eB-sHl">
-                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -901,7 +938,6 @@
                 <navigationController navigationBarHidden="YES" id="fUP-xO-gph" userLabel="HomeNavigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house" id="eCx-ZB-N4m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oBi-Y5-MKn">
-                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1080,9 +1116,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1OB-hF-VYL"/>
         <segue reference="qsI-Bg-Eat"/>
-        <segue reference="aoL-6Y-pFF"/>
+        <segue reference="OGb-sx-uvS"/>
         <segue reference="GfC-6K-5XZ"/>
     </inferredMetricsTieBreakers>
     <resources>
