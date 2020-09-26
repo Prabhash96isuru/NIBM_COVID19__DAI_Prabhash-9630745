@@ -292,6 +292,9 @@
                         <viewLayoutGuide key="safeArea" id="nin-BC-nxY"/>
                     </view>
                     <navigationItem key="navigationItem" id="l7f-8G-ebc"/>
+                    <connections>
+                        <outlet property="mapView" destination="5iO-hO-2FZ" id="BPM-Pw-URf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb5-pd-l9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1154,7 +1157,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1OB-hF-VYL"/>
         <segue reference="qsI-Bg-Eat"/>
         <segue reference="aoL-6Y-pFF"/>
         <segue reference="GfC-6K-5XZ"/>

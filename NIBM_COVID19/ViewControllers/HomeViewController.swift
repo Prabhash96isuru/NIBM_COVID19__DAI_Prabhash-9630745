@@ -5,7 +5,7 @@
 //  Created by Isuru Prabhash on 9/20/20.
 //  Copyright © 2020 Isuru Prabhash. All rights reserved.
 //
-/*
+
 
 import UIKit
 import MapKit
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         
         let region	= MKCoordinateRegion(center: coordinate, span: span)
-        mapView.setRegion(region, animated: true)
+        	 mapView.setRegion(region, animated: true)
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
@@ -53,4 +53,4 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
     }
 }
 	
-*/
+
